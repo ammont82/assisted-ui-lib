@@ -132,7 +132,7 @@ const AddBmcHostYamlForm: React.FC<
       <ModalBoxBody>
         <Stack hasGutter>
           <StackItem>
-            <EmptyState variant={EmptyStateVariant.large}>
+            <EmptyState variant={EmptyStateVariant.lg}>
               <EmptyStateIcon icon={UploadIcon} />
               <Title headingLevel="h4" size="lg">
                 {t('ai:Upload a YAML file')}

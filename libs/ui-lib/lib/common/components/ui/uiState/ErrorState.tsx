@@ -8,7 +8,7 @@ import {
   EmptyStateVariant,
   Button,
   ButtonVariant,
-  EmptyStateSecondaryActions,
+  EmptyStateActions,
   EmptyStateIconProps,
 } from '@patternfly/react-core';
 import { ExclamationCircleIcon } from '@patternfly/react-icons/dist/js/icons/exclamation-circle-icon';
@@ -49,7 +49,7 @@ const ErrorState = ({
   fetchData,
   icon = ExclamationCircleIcon,
   iconColor = globalDangerColor200.value,
-  variant = EmptyStateVariant.small,
+  variant = EmptyStateVariant.sm,
   primaryAction,
   actions,
 }: ErrorStateProps) => {
@@ -60,7 +60,7 @@ const ErrorState = ({
         <Title headingLevel="h2">{title}</Title>
         <EmptyStateBody>{content || <DefaultErrorContent fetchData={fetchData} />}</EmptyStateBody>
         {primaryAction}
-        {actions && <EmptyStateSecondaryActions>{actions}</EmptyStateSecondaryActions>}
+        {actions && <EmptyStateActions>{actions}</EmptyStateActions>}
       </EmptyState>
     </Bullseye>
   );

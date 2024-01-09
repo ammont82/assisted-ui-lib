@@ -1,5 +1,13 @@
 import React from 'react';
-import { Dropdown, DropdownItem, DropdownToggle, FormGroup, Tooltip } from '@patternfly/react-core';
+import {
+	FormGroup,
+	Tooltip
+} from '@patternfly/react-core';
+import {
+	Dropdown,
+	DropdownItem,
+	DropdownToggle
+} from '@patternfly/react-core/deprecated';
 import { useField, useFormikContext } from 'formik';
 import { ClusterDetailsValues, HelperText, getFieldId } from '../../../common';
 import { CaretDownIcon } from '@patternfly/react-icons/dist/js/icons/caret-down-icon';

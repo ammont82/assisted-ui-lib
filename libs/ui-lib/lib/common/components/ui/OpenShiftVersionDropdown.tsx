@@ -1,12 +1,14 @@
 import React from 'react';
 import {
-  DropdownItem,
-  DropdownToggle,
-  Dropdown,
-  HelperText,
-  FormGroup,
-  DropdownSeparator,
+	HelperText,
+	FormGroup
 } from '@patternfly/react-core';
+import {
+	DropdownItem,
+	DropdownToggle,
+	Dropdown,
+	DropdownSeparator
+} from '@patternfly/react-core/deprecated';
 import { CaretDownIcon } from '@patternfly/react-icons/dist/js/icons/caret-down-icon';
 
 import { OpenshiftVersionOptionType } from '../../types';

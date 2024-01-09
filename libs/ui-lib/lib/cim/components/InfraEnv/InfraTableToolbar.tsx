@@ -1,17 +1,19 @@
 import {
-  Badge,
-  Grid,
-  GridItem,
-  SearchInput,
-  Select,
-  SelectGroup,
-  SelectOption,
-  SelectVariant,
-  Split,
-  SplitItem,
-  ToolbarFilter,
-  ToolbarItem,
+	Badge,
+	Grid,
+	GridItem,
+	SearchInput,
+	Split,
+	SplitItem,
+	ToolbarFilter,
+	ToolbarItem
 } from '@patternfly/react-core';
+import {
+	Select,
+	SelectGroup,
+	SelectOption,
+	SelectVariant
+} from '@patternfly/react-core/deprecated';
 import { FilterIcon } from '@patternfly/react-icons/dist/js/icons/filter-icon';
 import * as React from 'react';
 import { HostStatus } from '../../../common/components/hosts/types';

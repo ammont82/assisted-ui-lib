@@ -1,20 +1,22 @@
 import React from 'react';
 import {
-  Table,
-  TableProps,
-  TableHeader,
-  TableBody,
-  RowWrapper,
-  RowWrapperProps,
-  SortByDirection,
-  ISortBy,
-  OnSort,
-  IRow,
-  IActionsResolver,
-  cellWidth,
-  breakWord,
-  sortable,
+	RowWrapper,
+	RowWrapperProps,
+	SortByDirection,
+	ISortBy,
+	OnSort,
+	IRow,
+	IActionsResolver,
+	cellWidth,
+	breakWord,
+	sortable
 } from '@patternfly/react-table';
+import {
+	Table,
+	TableProps,
+	TableHeader,
+	TableBody
+} from '@patternfly/react-table/deprecated';
 import { ClusterTableRows } from '../../../common/types/clusters';
 import DeleteClusterModal from './DeleteClusterModal';
 import { clusterStatusLabels, rowSorter, HumanizedSortable } from '../../../common';

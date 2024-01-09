@@ -1,23 +1,25 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import {
-  Toolbar,
-  ToolbarItem,
-  ToolbarContent,
-  ToolbarFilter,
-  InputGroup,
-  Select,
-  SelectOption,
-  TextInput,
-  ToolbarProps,
-  ToolbarFilterProps,
-  SelectProps,
-  TextInputProps,
-  ButtonVariant,
-  Spinner,
-  ToolbarGroup,
-  Tooltip,
+	Toolbar,
+	ToolbarItem,
+	ToolbarContent,
+	ToolbarFilter,
+	InputGroup,
+	TextInput,
+	ToolbarProps,
+	ToolbarFilterProps,
+	TextInputProps,
+	ButtonVariant,
+	Spinner,
+	ToolbarGroup,
+	Tooltip
 } from '@patternfly/react-core';
+import {
+	Select,
+	SelectOption,
+	SelectProps
+} from '@patternfly/react-core/deprecated';
 import { FilterIcon } from '@patternfly/react-icons/dist/js/icons/filter-icon';
 import { SyncIcon } from '@patternfly/react-icons/dist/js/icons/sync-icon';
 import { clusterStatusLabels, isSelectEventChecked, ToolbarButton } from '../../../common';

@@ -2,16 +2,18 @@ import React from 'react';
 import { useField } from 'formik';
 import Fuse from 'fuse.js';
 import {
-  FormGroup,
-  Select,
-  SelectOption,
-  SelectOptionObject,
-  SelectOptionProps,
-  SelectProps,
-  SelectVariant,
-  Stack,
-  StackItem,
+	FormGroup,
+	Stack,
+	StackItem
 } from '@patternfly/react-core';
+import {
+	Select,
+	SelectOption,
+	SelectOptionObject,
+	SelectOptionProps,
+	SelectProps,
+	SelectVariant
+} from '@patternfly/react-core/deprecated';
 import { MultiSelectFieldProps, MultiSelectOption } from './types';
 import { getFieldId } from './utils';
 import HelperText from './HelperText';

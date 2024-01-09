@@ -1,14 +1,16 @@
 import React from 'react';
 import flatten from 'lodash-es/flatten.js';
 import {
-  Dropdown,
-  DropdownItem,
-  DropdownToggle,
-  Label,
-  LabelGroup,
-  Split,
-  SplitItem,
+	Label,
+	LabelGroup,
+	Split,
+	SplitItem
 } from '@patternfly/react-core';
+import {
+	Dropdown,
+	DropdownItem,
+	DropdownToggle
+} from '@patternfly/react-core/deprecated';
 import { useField } from 'formik';
 
 import { MultiSelectField } from '../../../common';

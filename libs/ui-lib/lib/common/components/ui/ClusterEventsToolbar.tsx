@@ -1,24 +1,26 @@
 import React from 'react';
 import capitalize from 'lodash-es/capitalize.js';
 import {
-  Toolbar,
-  ToolbarItem,
-  ToolbarContent,
-  ToolbarFilter,
-  ToolbarChip,
-  Button,
-  ButtonVariant,
-  InputGroup,
-  Select,
-  SelectOption,
-  TextInput,
-  ToolbarProps,
-  ToolbarFilterProps,
-  SelectProps,
-  TextInputProps,
-  Badge,
-  TextInputTypes,
+	Toolbar,
+	ToolbarItem,
+	ToolbarContent,
+	ToolbarFilter,
+	ToolbarChip,
+	Button,
+	ButtonVariant,
+	InputGroup,
+	TextInput,
+	ToolbarProps,
+	ToolbarFilterProps,
+	TextInputProps,
+	Badge,
+	TextInputTypes
 } from '@patternfly/react-core';
+import {
+	Select,
+	SelectOption,
+	SelectProps
+} from '@patternfly/react-core/deprecated';
 import { SearchIcon } from '@patternfly/react-icons/dist/js/icons/search-icon';
 import { FilterIcon } from '@patternfly/react-icons/dist/js/icons/filter-icon';
 import type { ClusterEventsFiltersType } from '../../types';

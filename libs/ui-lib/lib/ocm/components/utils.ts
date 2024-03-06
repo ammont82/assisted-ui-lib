@@ -1,4 +1,5 @@
 import { Cluster } from '@openshift-assisted/types/./assisted-installer-service';
+import semver from 'semver';
 
 export const isOciPlatformType = (cluster: Cluster): boolean => {
   return (
@@ -14,6 +15,12 @@ export const getMajorMinorVersion = (version = '') => {
 export const isOCPVersionEqualsOrMajor = (
   openshiftVersion: string,
   ocpVersionToCompare: string,
-): boolean => {
-  return parseFloat(getMajorMinorVersion(openshiftVersion)) >= parseFloat(ocpVersionToCompare);
+) => {
+  const parsedMaxMinorVersion = ocpVersionToCompare ? semver.coerce(ocpVersionToCompare) : null;
+  return parsedMaxMinorVersion
+    ? semver.satisfies(
+        openshiftVersion,
+        `<=${semver.major(parsedMaxMinorVersion)}.${semver.minor(parsedMaxMinorVersion)}`,
+      )
+    : false;
 };

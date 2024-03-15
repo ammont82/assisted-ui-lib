@@ -204,6 +204,7 @@ const WithHostStatusPopover: React.FC<WithHostStatusPopoverProps> = (props) => (
     maxWidth="50rem"
     hideOnOutsideClick={props.hideOnOutsideClick}
     zIndex={props.zIndex || 300}
+    closeBtnAriaLabel={`close-popover-${props.host.requestedHostname ?? ''}`}
   >
     <Button variant={'link'} isInline isSmall={props.isSmall}>
       {props.children}

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Button, ButtonVariant, FormGroup, Modal, ModalVariant } from '@patternfly/react-core';
 import './OpenshiftVersionModal.css';
 import { OpenshiftSelectWithSearch } from '../../../common/components/ui/OpenshiftSelectWithSearch';
-import { useOpenshiftVersions } from '../../hooks';
 import { HelperTextType } from '../../../common/components/ui/OpenShiftVersionDropdown';
 import { useFormikContext } from 'formik';
 import { ClusterDetailsValues, OpenshiftVersionOptionType } from '../../../common';
@@ -10,14 +9,15 @@ import { ClusterDetailsValues, OpenshiftVersionOptionType } from '../../../commo
 type OpenShiftVersionModalProps = {
   setOpenshiftVersionModalOpen: (isOpen: boolean) => void;
   getHelperText: HelperTextType;
+  versions: OpenshiftVersionOptionType[];
 };
 
 export const OpenShiftVersionModal = ({
   setOpenshiftVersionModalOpen,
   getHelperText,
+  versions,
 }: OpenShiftVersionModalProps) => {
   const { setFieldValue } = useFormikContext<ClusterDetailsValues>();
-  const { versions } = useOpenshiftVersions(false);
   const onClose = () => setOpenshiftVersionModalOpen(false);
   const [customOpenshiftSelect, setCustomOpenshiftSelect] = useState<OpenshiftVersionOptionType>(); // Cambiar el tipo según lo que esperes aquí
 

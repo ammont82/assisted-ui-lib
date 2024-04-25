@@ -112,7 +112,8 @@ export const OcmClusterDetailsFormFields = ({
       false,
     );
   }, [setFieldValue, featureSupportLevelContext, featureSupportLevelData]);
-
+  // eslint-disable-next-line no-console
+  console.log('dins OcmClusterDetailsFormFields');
   return (
     <Form id="wizard-cluster-details__form">
       <OcmRichInputField

@@ -51,7 +51,6 @@ const OcmOpenShiftVersionSelect = ({ versions }: OcmOpenShiftVersionSelectProps)
   }, [selectOptions, customOpenshiftSelect]);
 
   const { versions: allVersions } = useOpenshiftVersions(false);
-
   const getHelperText = (value: string | undefined, inModal?: boolean) => {
     return getOpenshiftVersionHelperText(allVersions, value, t, inModal);
   };
@@ -71,6 +70,7 @@ const OcmOpenShiftVersionSelect = ({ versions }: OcmOpenShiftVersionSelectProps)
         <OpenShiftVersionModal
           setOpenshiftVersionModalOpen={setIsOpenshiftVersionModalOpen}
           getHelperText={getHelperText}
+          versions={allVersions}
         />
       )}
     </>

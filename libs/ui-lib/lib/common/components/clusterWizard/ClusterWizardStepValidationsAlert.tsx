@@ -116,15 +116,17 @@ const ClusterWizardStepValidationsAlert = <ClusterWizardStepsType extends string
           </Alert>
         </AlertGroup>
       )}
-      {lastInstallationPreparation && lastInstallationPreparation.status === 'failed' && (
-        <AlertGroup>
-          <Alert variant={AlertVariant.danger} title="Error in preparing installation" isInline>
-            <Flex spaceItems={{ default: 'spaceItemsSm' }} direction={{ default: 'column' }}>
-              <FlexItem>{lastInstallationPreparation.reason}</FlexItem>
-            </Flex>
-          </Alert>
-        </AlertGroup>
-      )}
+      {lastInstallationPreparation &&
+        lastInstallationPreparation.status === 'failed' &&
+        currentStepId === 'review' && (
+          <AlertGroup>
+            <Alert variant={AlertVariant.danger} title="Error in preparing installation" isInline>
+              <Flex spaceItems={{ default: 'spaceItemsSm' }} direction={{ default: 'column' }}>
+                <FlexItem>{lastInstallationPreparation.reason}</FlexItem>
+              </Flex>
+            </Alert>
+          </AlertGroup>
+        )}
     </>
   );
 };

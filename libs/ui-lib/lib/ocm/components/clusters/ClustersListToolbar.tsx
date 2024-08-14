@@ -4,7 +4,6 @@ import {
   Toolbar,
   ToolbarItem,
   ToolbarContent,
-  ToolbarFilter,
   InputGroup,
   TextInput,
   ToolbarProps,
@@ -28,6 +27,7 @@ import { useTranslation } from '../../../common/hooks/use-translation-wrapper';
 import { Cluster } from '@openshift-assisted/types/assisted-installer-service';
 import { useDispatchDay1, useSelectorDay1 } from '../../store';
 import { selectClustersUIState } from '../../store/slices/clusters/selectors';
+import { CustomToolbarFilter } from './CustomToolbarFilter';
 
 export type ClusterFiltersType = {
   [key: string]: string[]; // value from clusterStatusLabels
@@ -107,6 +107,8 @@ const ClustersListToolbar: React.FC<ClustersListToolbarProps> = ({
     window.addEventListener('resize', () => setStatusExpanded(false));
   }, []);
 
+  // eslint-disable-next-line no-console
+  console.log("cluster's list");
   return (
     <Toolbar
       id="clusters-list-toolbar"
@@ -131,7 +133,7 @@ const ClustersListToolbar: React.FC<ClustersListToolbarProps> = ({
             </InputGroupItem>
           </InputGroup>
         </ToolbarItem>
-        <ToolbarFilter
+        <CustomToolbarFilter
           chips={filters.status}
           deleteChip={onDeleteChip}
           deleteChipGroup={onDeleteChipGroup}
@@ -155,7 +157,7 @@ const ClustersListToolbar: React.FC<ClustersListToolbarProps> = ({
               />
             ))}
           </Select>
-        </ToolbarFilter>
+        </CustomToolbarFilter>
         <ToolbarButton
           variant={ButtonVariant.primary}
           onClick={() => navigate(`~new`)}
